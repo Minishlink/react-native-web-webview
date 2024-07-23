@@ -5,8 +5,11 @@ import * as method from './method';
 
 import { storiesOf } from '@storybook/react';
 
-storiesOf('HTML source', module).add('basic', html.basic);
+storiesOf('HTML source', module).add('basic', html.basic).add('inject javascript', html.inject);
 
-storiesOf('URI source', module).add('basic', uri.basic).add('onMessage', uri.onMessage);
+storiesOf('URI source', module)
+  .add('basic', uri.basic)
+  .add('onMessage', uri.onMessage)
+  .add('inject javascript', uri.inject);
 
-storiesOf('With method', module).add('basic', method.basic);
+storiesOf('With method', module).add('basic', method.basic).add('inject javascript', method.inject);

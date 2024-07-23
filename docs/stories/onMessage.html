@@ -18,7 +18,7 @@
         name: 'WebView',
       });
 
-      document.getElementById('button').addEventListener('click', function () {
+      function onClick() {
         if (window.opener) {
           // Web new window
           window.opener.postMessage(payload, window.opener.origin);
@@ -32,7 +32,9 @@
             window.postMessage(payload);
           });
         }
-      });
+      }
+
+      document.getElementById('button').addEventListener('click', onClick);
     </script>
   </body>
 </html>
