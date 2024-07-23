@@ -106,6 +106,10 @@ export class WebView extends Component {
     }
   };
 
+  injectJavaScript = (js) => {
+    this.frameRef.contentWindow.Function(js)();
+  };
+
   render() {
     if (this.props.newWindow) {
       return (
